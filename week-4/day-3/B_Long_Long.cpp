@@ -10,28 +10,35 @@ int main()
     cin >> t;
     while (t--)
     {
-        int n, cnt=0;
+        int n, cnt=0, neg=0;
         cin >> n;
-        vector<int> a;
+        int a[n];
+        long long s = 0;
         for (int i=0; i<n; i++)
         {
-            int x;
-            cin >> x;
-            if (x<0)
-            {
-                a.push_back(i);
-            }
+            cin >> a[i];
         }
-
-        for (int i=0; i<a.size()-1; i++)
+        
+        for (int i=0; i<n; i++)
         {
-            if (a[i]+1!=a[i+1])
+            s += abs(a[i]);
+            if (a[i]<0)
             {
-                cnt++;
+                if (neg==0)
+                {
+                    neg = 1;
+                    cnt++;
+                }
+                
+            }
+            else if (a[i]>0)
+            {
+                neg = 0;
             }
             
+            
         }
-        cout << cnt <<'\n'
+        cout << s <<" " << cnt <<'\n';
         
     }
     

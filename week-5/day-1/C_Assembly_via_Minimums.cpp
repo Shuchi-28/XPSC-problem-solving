@@ -31,7 +31,7 @@ int main()
             k--;
             cout << mini <<" ";
         }
-        cout << 1e9 <<" ";
+        cout << 1000000000 <<" ";
         cout <<'\n';
     }
 

@@ -15,18 +15,30 @@ int main()
         cin >> a[i];
     }
     int l=0, r=0;
-    int sum = 0, ans = INT_MAX;
+    long long int sum = 0;
+    int ans = INT_MAX;
     while (r<n)
     {
         sum += a[r];
         if (sum>=k)
         {
-            ans += min(ans, r-l+1);
-            l--;
+            ans = min(ans, r-l+1);
+            sum -= a[l];
+            l++;
+            while(sum<k && r<n)
+            {
+                r++;
+                sum += a[r];
+            }
+            sum -= a[r];
         }
-        r++;
+        else
+            r++;
     }
-    cout << ans << '\n';
+    if(ans==INT_MAX)
+        cout << -1 << '\n';
+    else
+        cout << ans << '\n';
     
 
     return 0;

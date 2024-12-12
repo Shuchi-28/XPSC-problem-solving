@@ -12,20 +12,24 @@ int main()
     while (t--)
     {
         int n;
-        cin >> n;
-        int arr[n];
-        map<int,char> mp;
+        string a, b, c;
+        cin >> n >> a >> b >> c;
+
+        bool flag = false;
         for (int i=0; i<n; i++)
         {
-            cin >> arr[i];
-            mp[arr[i]] = 'a';
+            if (c[i]!=b[i] && c[i]!=a[i])
+            {
+                flag = true;
+                break;
+            }
+            
         }
-        for (int i=0; i<n; i++)
-        {
-            cout << mp[arr[i]];
-            mp[arr[i]]++;
-        }
-        cout << '\n';
+        if(flag==true)
+            cout << "YES" <<'\n';
+        else
+            cout << "NO" <<'\n';
+ 
     }
     
 

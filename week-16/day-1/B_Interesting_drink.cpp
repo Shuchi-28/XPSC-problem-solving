@@ -8,7 +8,7 @@ int main()
     
     int n;
     cin >> n;
-    vector<int> v(n+1);
+    vector<int> v(n);
     for (int i=0; i<n; i++)
     {
         cin >> v[i];
@@ -24,7 +24,7 @@ int main()
         cin >> x;
 
         auto upit = upper_bound(v.begin(), v.end(), x);
-        cout << upit-v.begin()-1 <<'\n';
+        cout << upit-v.begin() <<'\n';
     }
     
         

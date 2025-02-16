@@ -20,6 +20,11 @@ int main()
             cin >> v[i];
         }
         
+        sort(v.begin(), v.end());
+
+        int i = n/2;
+
+        cout << v[i] <<'\n';
 
     }
 

@@ -11,15 +11,20 @@ int main()
 
     while(t--)
     {
-        int n, k;
-        cin >> n >> k;
+        int n, odd=0;
+        cin >> n;
 
-        vector<int> v(n);
         for (int i=0; i<n; i++)
         {
-            cin >> v[i];
+           int x;
+           cin >> x;
+           if(x%2 != 0)
+                odd++;
         }
-        
+        if(odd%2 ==0)
+            cout << "YES\n";
+        else
+            cout << "NO\n";
 
     }
 

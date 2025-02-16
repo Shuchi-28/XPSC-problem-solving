@@ -11,7 +11,7 @@ int main()
 
     while(t--)
     {
-        int n;
+        int n, sum=0;
         cin >> n;
 
         vector<int> v(n);
@@ -19,7 +19,14 @@ int main()
         {
             cin >> v[i];
         }
+        sort(v.begin(), v.end());
+
+        for (int i=1; i<n; i++)
+        {
+            sum += v[i]-v[i-1];
+        }
         
+        cout << sum <<'\n';
 
     }
 

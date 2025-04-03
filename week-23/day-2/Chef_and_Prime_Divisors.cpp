@@ -11,7 +11,19 @@ int main()
 
     while (t--)
     {
+        long long a, b;
+        cin >> a >> b;
+
+
+        while (__gcd(a, b)>1)
+        {
+            b /= __gcd(a,b);
+        }
         
+        if(b>1)
+            cout << "No\n";
+        else
+            cout << "Yes\n";
 
     }
     

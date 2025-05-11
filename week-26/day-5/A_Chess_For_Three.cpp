@@ -11,7 +11,15 @@ int main()
 
     while(t--)
     {
-        
+        int a, b, c;
+        cin >> a >> b >> c;
+
+        int n = a+b+c;
+        if(n%2 != 0)
+            cout << "-1\n";
+        else
+            cout << min(a+b, n/2) <<"\n";
+            
     }
 
 
